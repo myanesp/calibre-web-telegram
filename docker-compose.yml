@@ -1,0 +1,18 @@
+services:
+  calibre-web:
+    image: lscr.io/linuxserver/calibre-web
+    container_name: calibre-web
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Madrid
+      - DOCKER_MODS=linuxserver/mods:universal-calibre
+    volumes:
+      - ./calibre/config:/config
+      - ./calibre/books:/books
+      - ./calibre/custom-init:/custom-cont-init.d:ro
+      - ./calibre/custom-services:/custom-services.d:ro
+      - ./telethon/downloads/epub:/data/books:ro
+    ports:
+      - 8083:8083
+    restart: unless-stopped
