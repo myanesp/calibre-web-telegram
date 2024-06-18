@@ -1,6 +1,6 @@
 ## Script for uploading books to your Calibre Web docker container directly from Telegram
 
-This repository will give you the needed scripts to automatically upload books to Calibre-Web (Docker installation) when forwarding an ebook file to a Telegram bot. 
+This repository will give you the needed scripts to automatically upload books to Calibre-Web (Docker installation with the LinuxServer image) when forwarding an ebook file to a Telegram bot. 
 
 The scripts allow Calibre-Web to monitor a given directory in which the books we want to upload will be placed. Along with [Telethon Downloader](https://github.com/jsavargas/telethon_downloader), every time you send a book file to your bot, it will download the file in the folder of convenience, and Calibre-Web will add it to your library. 
 
