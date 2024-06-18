@@ -12,7 +12,7 @@ services:
       - ./calibre/books:/books
       - ./calibre/custom-init:/custom-cont-init.d:ro
       - ./calibre/custom-services:/custom-services.d:ro
-      - ./telethon/downloads/epub:/data/books:ro
+      - ./telethon/download/ebooks:/data/books:ro
     ports:
       - 8083:8083
     restart: unless-stopped
